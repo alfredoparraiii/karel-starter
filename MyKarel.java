@@ -22,10 +22,77 @@ import stanford.karel.*;
 
 public class MyKarel extends Karel {
     public void run() {
-    move();
-    move();
-    turnLeft();
-    move();
-    pickBeeper();
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        pickBeeper();
+
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        pickBeeper();
+        pickBeeper();
+
+        turnLeft();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+        pickBeeper();
+
     }
 }
