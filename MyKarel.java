@@ -21,78 +21,45 @@ import stanford.karel.*;
  */
 
 public class MyKarel extends Karel {
+    // Load DoubleBeepersKarel.w: start one square west of the pile, facing east.
+    // The square east of the pile must be empty and reachable. Karel needs
+    // at least one spare beeper in the bag for each beeper in the pile.
     public void run() {
-        turnLeft();
         move();
-        move();
-        move();
-        move();
-        pickBeeper();
+        doubleBeepers();
+    }
 
-        turnLeft();
-        turnLeft();
-        turnLeft();
-        move();
-        turnLeft();
-        turnLeft();
-        turnLeft();
-        move();
-        move();
-        move();
-        move();
-        pickBeeper();
-        pickBeeper();
+    // Start and finish on the original pile, facing east.
+    private void doubleBeepers() {
+        // Remove one original beeper and put two on the temporary square.
+        // Keeping the new beepers separate lets the original pile run out.
+        while (beepersPresent()) {
+            pickBeeper();
+            move();
+            putBeeper();
+            putBeeper();
+            turnAround();
+            move();
+            turnAround();
+        }
 
-        turnLeft();
+        // Move the doubled pile back to its original square.
         move();
-        turnLeft();
+        turnAround();
+        while (beepersPresent()) {
+            pickBeeper();
+            move();
+            putBeeper();
+            turnAround();
+            move();
+            turnAround();
+        }
         move();
-        move();
-        move();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
+        turnAround();
+    }
 
+    private void turnAround() {
         turnLeft();
         turnLeft();
-        move();
-        move();
-        move();
-        turnLeft();
-        move();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-
-        turnLeft();
-        move();
-        move();
-        move();
-        move();
-        turnLeft();
-        turnLeft();
-        turnLeft();
-        move();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-
-        turnLeft();
-        turnLeft();
-        turnLeft();
-        move();
-        move();
-        move();
-        move();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-        pickBeeper();
-
     }
 }
