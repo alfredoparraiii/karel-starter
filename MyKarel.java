@@ -21,31 +21,11 @@ import stanford.karel.*;
  */
 
 public class MyKarel extends Karel {
-
     public void run() {
-        move();
-        doubleTheBeepers();
+    move();
+    move();
+    turnLeft();
+    move();
+    pickBeeper();
     }
-    public void doubleTheBeepers() {
-        putDoubleBeeperOnNextDoor();
-//        moveBeeperOnNextDoorBack();
-    }
-
-    private void putDoubleBeeperOnNextDoor() {
-        while(beepersPresent()){
-            pickBeeper();
-            move();
-            putBeeper();
-            putBeeper();
-            turnAround();
-            move();
-            turnAround();
-        }
-    }
-
-    private void turnAround() {
-        turnLeft();
-        turnLeft();
-    }
-
 }
